@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-rows: .8fr .7fr 3fr .5fr;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas: "header header" 
+                          "saludo saludo"
+                          "eventos eventos"
+                          "footer footer";
+                         
+    grid-gap: 4px;
+    height: 100vh;
+    background-color: rgba(225, 236, 236, 0.904);
+
+}
+
+@media only screen and (max-width: 600px){
+  
+  .container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2.5fr .5fr;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: "header" 
+                          "saludo"
+                          "eventos"
+                          "footer ";
+                         
+    grid-gap: 4px;
+    height: 100vh;
+    background-color: rgba(225, 236, 236, 0.904);
+
+}
+}
+
+body {
+   background-image: url(img/turquoise-thick-furry-background.jpg);
+   
+}
+
+.eventos {
+    grid-area: eventos;
+    text-align: center;
+    
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: footer;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6rem;
+    color: blueviolet;
+}
+
+.saludo {
+    display: flex;
+    flex-direction: column;
+    grid-area: saludo;
+    justify-content: center;
+    }
+
+    .titulo {
+        text-align: center;
+    font-size: .9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 1px;
+
+    }
+
+.saludo > p {
+    text-align: center;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px;
+}
+
+.item {
+    background-color:rgba(19, 182, 247, 0.5);
+}
+
+.primero {
+    
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1px;
+    text-decoration: solid;
+    flex-direction: column;
+}
+
+.primero > h3 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+  .eventos > .primero > a > img {
+    height: 360px;
+    width: 70%;
+    padding: 1px;
+
+  }
+
+  .eventos > .primero > p {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    font-size: .5rem;
+  }
+
